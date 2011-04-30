@@ -1,6 +1,6 @@
 = netflow
 
-Description goes here.
+Ruby Netflow collector.
 
 == Contributing to netflow
  
@@ -14,6 +14,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2011 seeingidog. See LICENSE.txt for
+Copyright (c) 2011 Ian Morgan. See LICENSE.txt for
 further details.
 
