@@ -2,6 +2,9 @@
 
 Ruby Netflow collector.
 
+  Netflow.start_collector
+
+
 == Contributing to netflow
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet

@@ -19,11 +19,8 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Listens and parses netflow datagrams sent from network devices. More information on Netflow format: http://tools.ietf.org/html/rfc3954}
   gem.email = "ian@ruby-code.com"
   gem.authors = ["seeingidog"]
-  # Include your dependencies below. Runtime dependencies are required when using your gem,
-  # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   gem.add_runtime_dependency 'bindata'
   gem.add_runtime_dependency 'eventmachine'
-  #  gem.add_development_dependency 'rspec', '> 1.2.3'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
