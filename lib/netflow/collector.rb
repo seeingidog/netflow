@@ -10,7 +10,6 @@ class Netflow
         begin
           Netflow.parse_packet(data)
         rescue
-          #log instead of stop error
           puts "Error parsing packet"
         end
       end

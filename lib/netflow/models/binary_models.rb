@@ -17,7 +17,7 @@ class TemplateFlowset < BinData::Record
   string :flowset, :read_length => :flowset_length
 end
 
-class NetflowPDU < BinData::Record
+class Netflow9PDU < BinData::Record
   endian :big
   header :header
   template_flowset :template_flowset
@@ -26,8 +26,20 @@ class NetflowPDU < BinData::Record
   uint16 :data_flowset_length
   #string :data, :read_length  =>  lambda { data_flowset_length - 32 }
 end
+
+class Netflow5PDU < BinData::Record
+  endian :big
+  header :header
+end
+
 class DataFlowset < BinData::Record
   endian :big
   
   uint16 :template_id
+  uint16 :data_flowset_length
+end
+
+class Version5DataFlowset < BinData::Record
+  endian :big
+
 end

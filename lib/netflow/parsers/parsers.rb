@@ -1,10 +1,10 @@
-class Netflow
+class Netflow  
   def self.parse_packet(data)
     begin
       header = Header.read(data)
       if header.version == 9
-        puts header.inspect
-        #template = parse_template(data)
+        flowset = Netflow9PDU.read(data)
+        puts flowset.inspect
       elsif header.version == 5
         puts header.inspect
         #read data
@@ -17,10 +17,4 @@ class Netflow
     end
   end
   
-  def parse_template(data)
-    1
-  end
-  def parse_data_flowset
-    1
-  end
 end
