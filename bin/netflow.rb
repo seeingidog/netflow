@@ -1,9 +1,7 @@
-require File.expand_path(File.join(File.dirname(__FILE__), '..','lib','netflow'))
+#!/usr/bin/env ruby
 
-puts "Help" unless ARGV[0] != nil
+$:.unshift File.expand_path(File.join(File.dirname(__FILE__), '..','lib'))
 
-ARGV.each do |arg|
-  puts "Arguement #{arg}"
-end
+require 'netflow/collector'
 
-Netflow.start_collector
+NetflowCollector.start_collector

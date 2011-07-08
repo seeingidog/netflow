@@ -1,6 +1,8 @@
-class Netflow
-  
-  module NetflowCollector
+require 'netflow'
+
+class NetflowCollector
+
+  module Collector
     def post_init
       puts "Server listening."
     end
@@ -15,11 +17,11 @@ class Netflow
       end
     end
   end
-  
+
   def self.start_collector(bind_ip = '0.0.0.0', bind_port = 2055)
     EventMachine::run do
-      EventMachine::open_datagram_socket(bind_ip, bind_port, NetflowCollector)
+      EventMachine::open_datagram_socket(bind_ip, bind_port, Collector)
     end
   end
-  
+
 end
