@@ -1,8 +1,6 @@
 require 'bindata'
 require 'eventmachine'
-
-require 'netflow/version'
-
-require 'netflow/models/binary_models'
-require 'netflow/parsers/parsers'
-require 'netflow/storage/storage'
+dir = File.expand_path(File.join(File.dirname(__FILE__),  'netflow'))
+['models/binary_models','parsers/parsers','storage/storage', 'collector'].each do |req|
+  require File.join(dir, req)
+end

@@ -5,7 +5,7 @@ require "netflow/version"
 Gem::Specification.new do |s|
   s.name        = "netflow"
   s.version     = Netflow::VERSION
-  s.authors     = ["seeingidog"]
+  s.authors     = ["Ian Morgan"]
   s.email       = ["ian@ruby-code.com"]
   s.homepage    = "http://github.com/seeingidog/netflow"
   s.license     = "MIT"

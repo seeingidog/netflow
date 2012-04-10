@@ -1,5 +1,3 @@
-require 'netflow'
-
 class NetflowCollector
 
   module Collector
