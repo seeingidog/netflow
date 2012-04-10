@@ -2,6 +2,15 @@
 
 Ruby Netflow collector.
 
+== Installation
+
+  gem install netflow
+
+
+== Example
+
+Start collector.
+
   Netflow.start_collector
 
 
